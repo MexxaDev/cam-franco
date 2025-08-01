@@ -38,7 +38,7 @@
   const copiarContenido = async () => {
     try {
       await navigator.clipboard.writeText(texto);
-            alert("CVU copiado con exito!");
+            alert("ALIAS copiado con exito!");
       console.log('Contenido copiado al portapapeles');
     } catch (err) {
       console.error('Error al copiar: ', err);
@@ -49,7 +49,7 @@ let texto2 = document.getElementById('miAlias').innerHTML;
   const copiarContenido2 = async () => {
     try {
       await navigator.clipboard.writeText(texto2);
-      alert("Alias copiado con exito!");
+      alert("CVU copiado con exito!");
       console.log('Contenido copiado al portapapeles');
     } catch (err) {
       console.error('Error al copiar: ', err);
