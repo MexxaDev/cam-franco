@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>boda Cami & Franco</title>
+</head>
+<body>
+    <section>
+        <article>
+                <h2>Datos bancarios</h2>
+                <div>
+                    <h4>A nombre de: </h4>
+                    <p>Camila Fiorela Belen</p>
+                </div>
+                <div>
+                    <h4>CVU: </h4>
+                    <p>0000003100096872883409</p>
+                </div>
+                <div>
+                    <h4>Alias:  </h4>
+                    <p id="miCVU">Cfbelen.mp</p>
+                </div>
+                <div>
+                    <h4>CUIT/CUIL: </h4>
+                    <p id="miAlias">27390474887</p>
+                </div>
+        </article>
+        <button onclick="copiarContenido()">Copiar alias</button>
+        <button onclick="copiarContenido2()">Copiar CVU</button>
+    </section>
+
+
+<script>
+  let texto = document.getElementById('miCVU').innerHTML;
+  const copiarContenido = async () => {
+    try {
+      await navigator.clipboard.writeText(texto);
+      console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  }
+
+let texto2 = document.getElementById('miAlias').innerHTML;
+  const copiarContenido2 = async () => {
+    try {
+      await navigator.clipboard.writeText(texto2);
+      console.log('Contenido copiado al portapapeles');
+    } catch (err) {
+      console.error('Error al copiar: ', err);
+    }
+  }
+</script>
+</body>
+</html>
